@@ -16,6 +16,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
+          "customWebpackConfig": {
+            "path": "./webpack.config.js"
+         },
           "options": {
             "outputPath": "dist/hidroponikuApp/browser",
             "index": "src/index.html",
@@ -67,6 +70,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "customWebpackConfig": {
+            "path": "./webpack.config.js"
+         },
           "options": {
             "browserTarget": "hidroponikuApp:build"
           },
