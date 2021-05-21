@@ -26,6 +26,9 @@
     .searchpos{
       margin-bottom: 5px;
     }
+    .pcontainer{
+      display: block;max-width: 1600px;margin: auto;
+    }
   }
 
   @media only screen and (width: 768px) {
@@ -37,5 +40,8 @@
   @media only screen and (max-width: 450px) {
     .searchpos{
       margin-bottom: 2vw;
+    }
+    .pcontainer{
+      display: block;max-width: 420px;margin: auto;
     }
   }

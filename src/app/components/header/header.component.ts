@@ -8,20 +8,61 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  mobileMenuOpen = false
-  // showSideMenu = false
-  constructor() { }
+  // mobileMenuOpen = false
+  // isSearchBoxOpen = false
+  // isOpen = false
+  // profileOpen = false
+  // optOpen = false
+  // appOpen = false
+  // showMenu = false;
+  // notifOpen = false;
+  // // showSideMenu = false
+  // constructor() { }
 
-  ngOnInit(): void {
-  }
-  showMenu = false;
-  toggleNavbar(){
-    this.showMenu = !this.showMenu;
-  }
+  // ngOnInit(): void {
+  // }
+  // toggleNotif(){
+  //   this.notifOpen = !this.notifOpen
+  // }
+  
+  // toggleNavbar(){
+  //   this.showMenu = !this.showMenu;
+  // }
 
-  mobileMenu(){
-    this.mobileMenuOpen = false
-  }
+  // toggleProfile(){
+  //   this.profileOpen = !this.profileOpen
+  // }
+  // toggleOptions(){
+  //   this.optOpen = !this.optOpen
+  // }
 
+  // toggleApp(){
+  //   this.appOpen = !this.appOpen
+  // }
+  // toggle(){
+  //   this.isOpen = !this.isOpen
+  // }
+
+  // togglefalse(){
+  //   this.isOpen = false
+  // }
+
+  // mobileMenu(){
+  //   this.mobileMenuOpen = false
+  // }
+
+  // closeSearchBox(){
+  //   console.log(this.isSearchBoxOpen)
+  //   this.isSearchBoxOpen = false
+  // }
+
+  // openSearchBox(){
+  //   this.isSearchBoxOpen = true
+  // }
+  isList: number;
+  isMenu: boolean = false;
+  isSearch: boolean = false;
+  constructor() {}
+  ngOnInit(): void {}
 
 }
