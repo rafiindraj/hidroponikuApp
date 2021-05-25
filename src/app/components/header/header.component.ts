@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import { SettingsService, User } from '@delon/theme';
 // import { LayoutDefaultOptions } from '@delon/theme/layout-default';
 
@@ -62,7 +63,13 @@ export class HeaderComponent implements OnInit {
   isList: number;
   isMenu: boolean = false;
   isSearch: boolean = false;
-  constructor() {}
-  ngOnInit(): void {}
+  constructor(private route : Router) {}
+  ngOnInit(): void {
+    // this. openModal(true)
+  }
+  showModal = false;
+  cartPage(){
+    this.route.navigateByUrl('/cart');
+  }
 
 }
