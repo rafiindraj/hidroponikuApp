@@ -13,6 +13,7 @@
     background: #ffffff;
     box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10%;
+    padding: 10px;
     // border: 0.5px solid gray;
     /* height: auto; */
   }
@@ -87,7 +88,7 @@
 
 .title2 {
   margin-left: 2px;
-  font-size: 1em;
+  font-size: calc(2px + 6 * ((100vw - 769px) / 680));
 }
 
 .row {
