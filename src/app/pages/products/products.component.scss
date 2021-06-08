@@ -1,0 +1,98 @@
+@media only screen and (min-width: 769px) {
+    .searchpos {
+      margin-bottom: 5px;
+    }
+    .pcontainer {
+      display: block;
+      max-width: 1600px;
+      margin: auto;
+    }
+    .productcard {
+      width: 16rem;
+      height: 13rem;
+      background: #ffffff;
+      box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 10%;
+      padding: 10px;
+      // border: 0.5px solid gray;
+      /* height: auto; */
+    }
+    .image {
+      border-radius: 10%;
+      width: 16rem;
+      height: 10rem;
+      object-fit: cover;
+    }
+  }
+  
+  @media only screen and (width: 768px) {
+    .searchpos {
+      margin-bottom: 1vw;
+    }
+    .productcard {
+      width: 13rem;
+      height: 10rem;
+      background: #ffffff;
+      box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 10%;
+      //   border: 0.5px solid black;
+      /* height: auto; */
+    }
+    .image {
+      border-radius: 10%;
+      width: 13rem;
+      height: 7rem;
+      object-fit: cover;
+    }
+    .pcontainer {
+      display: block;
+      max-width: 420px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .image {
+      border-radius: 10%;
+      width: 13rem;
+      height: 7rem;
+      object-fit: cover;
+    }
+    .searchpos {
+      margin-bottom: 2vw;
+    }
+    .pcontainer {
+      display: block;
+      max-width: 420px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .productcard {
+      width: 13rem;
+      height: 10rem;
+      background: #ffffff;
+      box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 10%;
+      //   border: 0.5px solid black;
+      /* height: auto; */
+    }
+  }
+  
+  .mr20 {
+    margin-right: 20px;
+    height: 14rem;
+  }
+  
+  .title2 {
+    margin-left: 2px;
+    font-size: calc(2px + 6 * ((100vw - 769px) / 680));
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
