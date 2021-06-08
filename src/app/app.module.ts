@@ -22,6 +22,7 @@ import { CardOneComponent } from './components/cards-one/card-one/card-one.compo
 import { CardTwoComponent } from './components/cards-two/card-two/card-two.component';
 import { CardThreeComponent } from './components/cards-three/card-three/card-three.component';
 import { BlogCardsComponent } from './components/blog-cards/blog-cards.component';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
 // import { LayoutDefaultModule } from '@delon/theme/layout-default';
 // import { HomeModule } from './pages/home/home.module';
 // import { ProductsModule } from './pages/products/products.module';
@@ -48,6 +49,7 @@ import { BlogCardsComponent } from './components/blog-cards/blog-cards.component
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
+    OverlayPanelModule,
     // DragDropModule,
     // ScrollingModule,
     BrowserAnimationsModule,
