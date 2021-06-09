@@ -17,7 +17,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
 // import { IconDefinition } from '@ant-design/icons-angular';
 // import * as AllIcons from '@ant-design/icons-angular/icons';
-import { ClickOutsideModule } from 'ng-click-outside';
 import { CardOneComponent } from './components/cards-one/card-one/card-one.component';
 import { CardTwoComponent } from './components/cards-two/card-two/card-two.component';
 import { CardThreeComponent } from './components/cards-three/card-three/card-three.component';
@@ -55,7 +54,6 @@ import { BlogCardsComponent } from './components/blog-cards/blog-cards.component
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    ClickOutsideModule,
     // LayoutDefaultModule,
     // HomeModule,
     // ProductsModule,

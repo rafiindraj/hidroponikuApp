@@ -27,8 +27,6 @@
     "@angular/service-worker": "^11.2.14",
     "@nguniversal/express-engine": "^11.2.1",
     "express": "^4.15.2",
-    "ng-click-outside": "^8.0.0",
-    "primeng": "^12.0.0-rc.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
