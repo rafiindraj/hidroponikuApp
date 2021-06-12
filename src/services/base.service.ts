@@ -1,8 +1,16 @@
 import { Injectable } from "@angular/core";
 import { map, catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+var headers_object = new HttpHeaders();
+headers_object.append('Content-Type', 'application/json');
+headers_object.append("Authorization", "Basic " + btoa("rakapermanaputraa@gmail.com:rakacopo@123"));
+const httpOptions = {
+    // headers: new HttpHeaders({
+    //   'Content-Type': 'application/json'
+    // })
+    headers: headers_object
+  };
 @Injectable()
 export class BaseService {
   constructor(private http: HttpClient) {}
@@ -18,8 +26,9 @@ export class BaseService {
       .pipe(map(response => response),catchError(this.handleError))
   }
   createData(url:any, data:any) {
+    debugger
     return this.http
-      .post(url, data)
+      .post(url, data, httpOptions)
       .pipe(map(response => response),catchError(this.handleError))
   }
   createDataParam(url:any, data:any, params:any) {

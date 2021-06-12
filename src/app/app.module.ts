@@ -21,6 +21,8 @@ import { CardOneComponent } from './components/cards-one/card-one/card-one.compo
 import { CardTwoComponent } from './components/cards-two/card-two/card-two.component';
 import { CardThreeComponent } from './components/cards-three/card-three/card-three.component';
 import { BlogCardsComponent } from './components/blog-cards/blog-cards.component';
+import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
 // import {OverlayPanelModule} from 'primeng/overlaypanel';
 // import { LayoutDefaultModule } from '@delon/theme/layout-default';
 // import { HomeModule } from './pages/home/home.module';
@@ -54,6 +56,7 @@ import { BlogCardsComponent } from './components/blog-cards/blog-cards.component
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     // LayoutDefaultModule,
     // HomeModule,
     // ProductsModule,
