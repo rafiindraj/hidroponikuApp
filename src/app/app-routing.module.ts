@@ -22,6 +22,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/cart/cart.module').then((m) => m.CartModule),
   },
+  {
+    path: 'notification',
+    loadChildren: () =>
+      import('./pages/notification/notification.module').then(m => m.NotificationModule)
+  },
 ];
 
 @NgModule({
@@ -32,4 +37,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
