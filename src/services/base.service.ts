@@ -1,58 +1,51 @@
+
 import { Injectable } from "@angular/core";
 import { map, catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-var headers_object = new HttpHeaders();
-headers_object.append('Content-Type', 'application/json');
-headers_object.append("Authorization", "Basic " + btoa("rakapermanaputraa@gmail.com:rakacopo@123"));
-const httpOptions = {
-    // headers: new HttpHeaders({
-    //   'Content-Type': 'application/json'
-    // })
-    headers: headers_object
-  };
+import { HttpClient } from '@angular/common/http';
+
+
 @Injectable()
 export class BaseService {
-  constructor(private http: HttpClient) {}
+  constructor(public http: HttpClient) { }
 
-  getData(url:any):Observable<any> {
+  getData(url: any, headers:any): Observable<any> {
     return this.http
-      .get(url)
-      .pipe(map(response => response),catchError(this.handleError))
+      .get(url,{headers:headers})
+      .pipe(map(response => response), catchError((err: any) => this.handleError(err.message)));
   }
-  getDataParam(url:any, params:any) {
+  getDataParam(url: any, params: any, headers:any): Observable<any> {
     return this.http
-      .get(url, { params: params })
-      .pipe(map(response => response),catchError(this.handleError))
+      .get(url, { params: params, headers:headers })
+      .pipe(map(response => response), catchError((err: any) => this.handleError(err.message)));
   }
-  createData(url:any, data:any) {
-    debugger
+  createData(url: any, data: any,headers:any) : Observable<any> {
     return this.http
-      .post(url, data, httpOptions)
-      .pipe(map(response => response),catchError(this.handleError))
+      .post(url, data,{headers:headers})
+      .pipe(map(response => response), catchError((err: any) => this.handleError(err.message)));
   }
-  createDataParam(url:any, data:any, params:any) {
+  createDataParam(url: any, data: any, params: any,headers:any): Observable<any> {
     return this.http
-      .post(url, data, { params: params })
-      .pipe(map(response => response),catchError(this.handleError))
+      .post(url, data, { params: params, headers:headers })
+      .pipe(map(response => response), catchError((err: any) => this.handleError(err.message)));
   }
-  updateData(url:any, data:any) {
+  updateData(url: any, data: any,headers:any): Observable<any> {
     return this.http
-      .put(url, data)
-      .pipe(map(response => response),catchError(this.handleError))
+      .put(url, data,{headers:headers})
+      .pipe(map(response => response), catchError((err: any) => this.handleError(err.message)));
   }
-  updateDataParam(url:any, data:any, params:any) {
+  updateDataParam(url: any, data: any, params: any,headers:any): Observable<any> {
     return this.http
-      .put(url, data, { params: params })
-      .pipe(map(response => response),catchError(this.handleError))
+      .put(url, data, { params: params, headers:headers })
+      .pipe(map(response => response), catchError((err: any) => this.handleError(err.message)));
   }
-  deleteData(url:any, data:any) {
+  deleteData(url: any, data: any,headers:any): Observable<any> {
     return this.http
-      .delete(url + "/" + data)
-      .pipe(map(response => response),catchError(this.handleError))
+      .delete(url + "/" + data,{headers:headers})
+      .pipe(map(response => response), catchError((err: any) => this.handleError(err.message)));
   }
 
-  handleError(error:any){
+  handleError(error: any) {
     return throwError(error.message || 'this error')
   }
 }

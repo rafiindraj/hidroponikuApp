@@ -3,15 +3,6 @@ import { Injectable } from '@angular/core';
 import { BaseService } from './base.service';
 import { Configuration } from './config';
 // import { environment } from '../src/environments/environment'
-var headers_object = new HttpHeaders();
-headers_object.append('Content-Type', 'application/json');
-headers_object.append("Authorization", "Basic " + btoa("rakapermanaputraa@gmail.com:rakacopo@123"));
-const httpOptions = {
-    // headers: new HttpHeaders({
-    //   'Content-Type': 'application/json'
-    // })
-    headers: headers_object
-  };
 @Injectable({
   providedIn: 'root'
 })
@@ -22,9 +13,18 @@ export class ProductService extends BaseService {
     super(http);
    }
 
+  //  createAuthorizationHeader(headers: Headers) {
+  //   headers.append('Authorization', 'Basic ' +
+  //     btoa('rakapermanaputraa@gmail.com:rakacopo@123')); 
+  // }
+
   getProductbyPage(type, page, perpage){
+    // let headers = new Headers()
+    // this.createAuthorizationHeader(headers)
+    let httpHeaders = new HttpHeaders();
+    // httpHeaders = httpHeaders.append("Authorization", "Basic " +  btoa("rakapermanaputraa@gmail.com:rakacopo@123"));
+    httpHeaders = httpHeaders.append("Content-Type", "multipart/form-data");
     let body = {type : type, page: page, perpage: perpage }
-    // let headers = {httpOptions}
-    return this.createData(Configuration.APP_URL + Configuration.PRODUCT,body);
+    return this.createData(Configuration.APP_URL + Configuration.PRODUCT,body,httpHeaders);
   }
 }

@@ -15,4 +15,7 @@ export class Configuration {
     //product
     public static get PRODUCT(): string {return '/product'}
 
+    //feed
+    public static get FEED():string {return '/product'}
+
 } 

@@ -60,12 +60,19 @@ export class HeaderComponent implements OnInit {
   // openSearchBox(){
   //   this.isSearchBoxOpen = true
   // }
+  doLogin : any
   isList: number;
   isMenu: boolean = false;
   isSearch: boolean = false;
   constructor(private route : Router) {}
   ngOnInit(): void {
     // this. openModal(true)
+    if( localStorage.getItem("Login")!=null ){
+      this.doLogin = false
+    }
+    else {
+      this.doLogin = true
+    }
   }
   showModal = false;
   cartPage(){
